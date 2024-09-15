@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .nav-text {
+    @apply text-[#244D61] no-underline text-[.97rem] font-semibold  tracking-wide px-4 py-1.5 hover:bg-[#244D61] hover:text-white hover:transition-all hover:ease-in-out hover:duration-300 hover:rounded-3xl active:transition-all active:ease-in-out active:duration-300 active:rounded-3xl;
+  }
+  #click:checked ~ nav {
+    left: 0%;
+    transition: all 0.3s ease;
+  }
+}
