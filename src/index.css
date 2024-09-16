@@ -4,7 +4,11 @@
 
 @layer utilities {
   .nav-text {
-    @apply text-[#244D61] no-underline text-[.97rem] font-semibold  tracking-wide px-4 py-1.5 hover:bg-[#244D61] hover:text-white hover:transition-all hover:ease-in-out hover:duration-300 hover:rounded-3xl active:transition-all active:ease-in-out active:duration-300 active:rounded-3xl;
+    @apply px-4 py-1.5 text-[.97rem] font-semibold tracking-wide no-underline hover:rounded-3xl hover:bg-primary hover:text-white hover:transition-all hover:duration-300 hover:ease-in-out active:rounded-3xl active:transition-all active:duration-300 active:ease-in-out;
+  }
+
+  .social-icon {
+    @apply text-center text-2xl text-black hover:text-primary;
   }
   #click:checked ~ nav {
     left: 0%;

@@ -1,16 +1,16 @@
 export default function Navbar() {
   return (
     <>
-      <header className="fixed top-0 w-full  bg-white shadow-md shadow-gray-100">
-        <div className="py-4 flex justify-between items-center max-w-[80%] mx-auto ">
+      <header className="fixed top-0 z-50 w-full bg-white text-primary shadow-md shadow-gray-100">
+        <div className="mx-auto flex max-w-[80%] items-center justify-between py-4">
           <div className="logo text-xl font-extrabold">
-            <a href="#" className="text-[#244D61] no-underline">
-              Shirloin
+            <a href="#" className="no-underline">
+              Riccardo.dev
             </a>
           </div>
           <input type="checkbox" id="click" className="hidden" />
 
-          <nav className="hidden md:flex space-x-4">
+          <nav className="hidden space-x-4 md:flex">
             <a href="#" className="nav-text">
               Home
             </a>
@@ -29,7 +29,7 @@ export default function Navbar() {
           </nav>
           <label
             htmlFor="click"
-            className="flex md:hidden text-[#244D61] text-[1.5rem] font-bold cursor-pointer"
+            className="flex cursor-pointer text-[1.5rem] font-bold md:hidden"
           >
             <i className="bi bi-list"></i>
           </label>
