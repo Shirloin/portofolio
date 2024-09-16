@@ -1,3 +1,5 @@
+import NavText from "./NavText";
+
 export default function Navbar() {
   return (
     <>
@@ -10,22 +12,11 @@ export default function Navbar() {
           </div>
           <input type="checkbox" id="click" className="hidden" />
 
-          <nav className="hidden space-x-4 md:flex">
-            <a href="#" className="nav-text">
-              Home
-            </a>
-            <a href="#" className="nav-text">
-              About
-            </a>
-            <a href="#" className="nav-text">
-              Skills
-            </a>
-            <a href="#" className="nav-text">
-              Portfolio
-            </a>
-            <a href="#" className="nav-text">
-              Contact
-            </a>
+          <nav className="hidden space-x-8 md:flex">
+            <NavText to="/" title="Home" />
+            <NavText to="/project" title="Projects" />
+            <NavText to="/certification" title="Certifications" />
+            <NavText to="/contact" title="Contact" />
           </nav>
           <label
             htmlFor="click"

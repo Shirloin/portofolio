@@ -4,7 +4,15 @@
 
 @layer utilities {
   .nav-text {
-    @apply px-4 py-1.5 text-[.97rem] font-semibold tracking-wide no-underline hover:rounded-3xl hover:bg-primary hover:text-white hover:transition-all hover:duration-300 hover:ease-in-out active:rounded-3xl active:transition-all active:duration-300 active:ease-in-out;
+    @apply relative text-base font-semibold capitalize tracking-wide no-underline;
+  }
+
+  .active .underline-animation {
+    @apply w-full;
+  }
+
+  .underline-animation {
+    @apply absolute inset-x-0 bottom-0 h-0.5 w-0 overflow-hidden bg-primary transition-all duration-300 group-hover:w-full;
   }
 
   .social-icon {
