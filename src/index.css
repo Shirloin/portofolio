@@ -4,13 +4,12 @@
 
 @layer utilities {
   .nav-text {
-    @apply relative text-base font-semibold capitalize tracking-wide no-underline;
+    @apply relative text-base font-semibold capitalize tracking-wide;
   }
 
   .active .underline-animation {
     @apply w-full;
   }
-
   .underline-animation {
     @apply absolute inset-x-0 bottom-0 h-0.5 w-0 overflow-hidden bg-primary transition-all duration-300 group-hover:w-full;
   }
