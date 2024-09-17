@@ -28,13 +28,19 @@ export default function ProjectCard({
   github = Default.github,
   demo = Default.demo,
 }: ProjectCardProps) {
+  const animate = index % 2 == 0 ? "fade-right" : "fade-left";
   return (
     <>
       <div
-        className={`flex h-72 w-full gap-8 ${index % 2 == 1 && "flex-row-reverse"}`}
+        className={`my-28 flex w-full flex-grow items-start gap-8 ${index % 2 == 1 ? "animate__animated animate__fadeInRight flex-row-reverse" : "animate__animated animate__fadeInLeft"}`}
       >
-        <img className="h-72 min-w-[500px] rounded-lg" src={image} alt="" />
-        <div className="mx-auto flex flex-col items-center">
+        <img
+          data-aos={animate}
+          className="h-72 min-w-[500px] rounded-lg"
+          src={image}
+          alt=""
+        />
+        <div data-aos={animate} className="mx-auto flex flex-col items-center">
           <h1 className="text-center text-xl font-bold uppercase">{title}</h1>
           <p className="mt-2 text-center leading-tight tracking-tight">
             {description}

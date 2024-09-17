@@ -3,11 +3,11 @@ import ProjectCard from "../components/cards/ProjectCard";
 export default function ProjectPage() {
   return (
     <>
-      <div className="mx-auto my-20 flex flex-grow flex-col">
+      <div className="mx-auto my-28 flex flex-grow flex-col">
         <h1 className="text-2xl font-bold">
           Each project is a unique piece of development
         </h1>
-        <div className="mt-10 flex w-full flex-col space-y-28">
+        <div className="flex w-full flex-grow flex-col">
           <ProjectCard index={0} />
           <ProjectCard index={1} />
           <ProjectCard index={2} />

@@ -22,3 +22,28 @@
     transition: all 0.3s ease;
   }
 }
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slideRight {
+  animation: 1s ease-out 0s 1 slideInRight;
+}
+
+.slideLeft {
+  animation: 1s ease-out 0s 1 slideInLeft;
+}
