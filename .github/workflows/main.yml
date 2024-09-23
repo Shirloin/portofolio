@@ -9,8 +9,7 @@ jobs:
     name: Build Docker Imge
     runs-on: ubuntu-latest
     steps:
-      - #checkout to the repository on the build machine
-        name: Checkout
+      - name: Checkout #checkout to the repository on the build machine
         uses: actions/checkout@v2
 
       - #Login to Docker Hub using secret in github
