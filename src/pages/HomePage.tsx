@@ -1,7 +1,7 @@
 export default function HomePage() {
   return (
     <>
-      <div className="mx-auto my-10 flex w-full flex-col-reverse flex-wrap items-center justify-center gap-4 px-4 md:my-20 md:flex-row lg:gap-20">
+      <div className="mx-auto my-20 flex w-full flex-grow flex-col-reverse flex-wrap items-center justify-center gap-4 px-4 md:flex-row lg:gap-20">
         <div className="max-w-sm lg:max-w-lg">
           <h1 className="animate__animated animate__fadeInLeft text-3xl font-bold lg:text-5xl">
             <span>Hi, It's Me</span> <br />
