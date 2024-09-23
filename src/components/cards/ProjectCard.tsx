@@ -12,7 +12,6 @@ interface ProjectCardProps {
 export default function ProjectCard({
   index,
   thumbnail,
-  images,
   title,
   description,
   stack,
@@ -20,7 +19,6 @@ export default function ProjectCard({
   demo,
 }: ProjectCardProps) {
   const animate = index! % 2 == 0 ? "fade-right" : "fade-left";
-  console.log(images);
   return (
     <>
       <div
@@ -28,7 +26,7 @@ export default function ProjectCard({
       >
         <img
           data-aos={animate}
-          className="aspect-video w-full max-w-lg rounded-lg object-fill"
+          className="aspect-video w-full max-w-lg rounded-lg border bg-white object-fill shadow-md"
           src={thumbnail}
           alt=""
         />

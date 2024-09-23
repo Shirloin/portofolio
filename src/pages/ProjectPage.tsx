@@ -12,6 +12,15 @@ const projects: IProject[] = [
     demo: "https://easy-buy.shirloin.my.id/",
   },
   {
+    title: "Job Fit CV",
+    description:
+      "Job Fit CV is a web application for student in Binus University to create a nice portofolio and find a suitable job for their enrichment career.",
+    thumbnail: "/images/project/job-fit-cv.png",
+    stack: ["NextJS", "Tailwind", "Prisma", "Postgresql"],
+    github: "https://github.com/shirloin/job-fit-cv",
+    demo: "https://job-fit-cv.shirloin.my.id/",
+  },
+  {
     title: "CodeXchange",
     description:
       "CodeXchange is a web application for developers, designed as a platform to share and debug code collaboratively. It provides an interactive space where developers can post their code snippets, problems, or projects they are working on, inviting others to review, debug, and suggest improvements",
@@ -27,11 +36,6 @@ const projects: IProject[] = [
     thumbnail: "/images/project/aora.png",
     stack: ["React Native", "Nativewind", "Appwrite"],
     github: "https://github.com/shirloin/aora",
-    images: [
-      "/images/project/aora_1.jpg",
-      "/images/project/aora_2.jpg",
-      "/images/project/aora_3.jpg",
-    ],
   },
 ];
 
@@ -52,7 +56,6 @@ export default function ProjectPage() {
               github={p.github}
               demo={p.demo}
               stack={p.stack}
-              images={p.images}
             />
           ))}
         </div>
