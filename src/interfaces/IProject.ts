@@ -1,9 +1,9 @@
 export interface IProject {
-    index: number;
-    image: string;
-    title: string;
-    description: string;
-    stack: string[];
-    github: string;
-    demo: string;
+    thumbnail?: string
+    images?: string[];
+    title?: string;
+    description?: string;
+    stack?: string[];
+    github?: string;
+    demo?: string;
 }

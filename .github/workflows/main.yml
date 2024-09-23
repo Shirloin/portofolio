@@ -42,5 +42,6 @@ jobs:
           password: ${{secrets.VPS_PASSWORD}}
           script: |
             cd shirloin
+            curl -o docker-compose.prod.yml https://raw.githubusercontent.com/shirloin/portofolio/main/docker-compose.prod.yml
             docker pull ${{secrets.DOCKERHUB_USERNAME}}/shirloin:latest
             docker-compose up -d

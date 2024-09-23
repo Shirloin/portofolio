@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    image: shirloin
+    container_name: shirloin
+    ports:
+      - "4321:3000"
