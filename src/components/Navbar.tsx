@@ -1,3 +1,4 @@
+import MenuSheet from "./MenuSheet";
 import NavText from "./NavText";
 
 export default function Navbar() {
@@ -18,12 +19,7 @@ export default function Navbar() {
             <NavText to="/certification" title="Certifications" />
             <NavText to="/contact" title="Contact" />
           </nav>
-          <label
-            htmlFor="click"
-            className="flex cursor-pointer text-[1.5rem] font-bold md:hidden"
-          >
-            <i className="bi bi-list"></i>
-          </label>
+          <MenuSheet />
         </div>
       </header>
     </>
