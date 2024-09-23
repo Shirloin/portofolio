@@ -3,6 +3,7 @@ import HomePage from "../pages/HomePage";
 import Layout from "../components/Layout";
 import ProjectPage from "../pages/ProjectPage";
 import CertificationPage from "../pages/CertificationPage";
+import ContactPage from "../pages/ContactPage";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/certification",
         element: <CertificationPage />,
+      },
+      {
+        path: "/contact",
+        element: <ContactPage />,
       },
     ],
   },

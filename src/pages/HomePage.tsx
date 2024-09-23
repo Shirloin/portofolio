@@ -1,13 +1,13 @@
 export default function HomePage() {
   return (
     <>
-      <div className="mx-auto my-20 flex w-full flex-wrap items-center justify-center gap-20">
-        <div className="max-w-lg">
-          <h1 className="animate__animated animate__fadeInLeft text-5xl font-bold">
+      <div className="mx-auto my-10 flex w-full flex-col-reverse flex-wrap items-center justify-center gap-4 px-4 md:my-20 md:flex-row lg:gap-20">
+        <div className="max-w-sm lg:max-w-lg">
+          <h1 className="animate__animated animate__fadeInLeft text-3xl font-bold lg:text-5xl">
             <span>Hi, It's Me</span> <br />
             <span>Riccardo</span>
           </h1>
-          <p className="animate__animated animate__fadeInLeft mt-4 font-sans text-base font-medium">
+          <p className="animate__animated animate__fadeInLeft mt-4 font-sans text-sm font-medium lg:text-base">
             Hi, I'm Riccardo, a Bachelor's graduate in Computer Science
             specializing in Mobile Application and Technology. With a passion
             for building innovative digital solutions, I have hands-on
@@ -31,7 +31,7 @@ export default function HomePage() {
             </a>
           </div>
         </div>
-        <div className="animate__animated animate__fadeInLeft h-80 w-80 overflow-hidden rounded-full">
+        <div className="animate__animated animate__fadeInLeft h-40 w-40 overflow-hidden rounded-full lg:h-80 lg:w-80">
           <img
             className="h-full w-full scale-110 rounded-full object-cover"
             src="/images/profile/profile_1.jpg"

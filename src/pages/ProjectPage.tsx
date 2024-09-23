@@ -42,13 +42,12 @@ const projects: IProject[] = [
 export default function ProjectPage() {
   return (
     <>
-      <div className="mx-auto my-28 flex flex-grow flex-col">
-        <h1 className="text-2xl font-bold">
-          Each project is a unique piece of development
-        </h1>
+      <div className="mx-auto my-28 flex flex-grow flex-col px-4">
+        <h1 className="text-center text-2xl font-bold">Project Lists</h1>
         <div className="flex w-full flex-grow flex-col">
           {projects.map((p, index) => (
             <ProjectCard
+              key={index}
               index={index}
               title={p.title}
               description={p.description}

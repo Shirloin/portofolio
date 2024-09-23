@@ -27,8 +27,8 @@ const certificateList: ICertificate[] = [
 export default function CertificationPage() {
   return (
     <>
-      <div className="mx-auto my-20">
-        <h1 className="animate__animated animate__fadeInLeft mb-4 text-center text-lg font-bold md:mb-10 md:mt-4 md:text-3xl">
+      <div className="mx-auto my-20 overflow-hidden">
+        <h1 className="mb-4 text-center text-base font-bold md:mb-10 md:text-3xl">
           Certification Lists
         </h1>
         <div className="grid w-full place-items-center gap-4 px-4 sm:grid-cols-2 sm:gap-10">
