@@ -10,8 +10,7 @@ export default function CertificationCard({
   return (
     <>
       <a
-        data-aos="zoom-in-up"
-        className="max-w-xl"
+        className="animate__animated animate__zoomIn max-w-xl"
         href={certificate.link}
         target="_blank"
       >

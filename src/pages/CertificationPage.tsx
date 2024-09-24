@@ -23,7 +23,7 @@ const certificateList: ICertificate[] = [
 export default function CertificationPage() {
   return (
     <>
-      <div className="mx-auto my-20 flex flex-col justify-start overflow-hidden">
+      <div className="mx-auto my-20 flex flex-col justify-start overflow-hidden md:my-28">
         <h1 className="mb-4 text-center text-base font-bold md:mb-10 md:text-3xl">
           Certification Lists
         </h1>
