@@ -19,6 +19,7 @@ export default function CertificationCard({
           className="h-full w-full rounded-lg border object-contain"
           src={certificate.image}
           alt=""
+          loading="lazy"
         />
       </a>
     </>
