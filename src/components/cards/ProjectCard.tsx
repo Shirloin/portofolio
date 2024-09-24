@@ -29,6 +29,7 @@ export default function ProjectCard({
           className="aspect-video w-full max-w-lg rounded-lg border bg-white object-fill shadow-md"
           src={thumbnail}
           alt=""
+          loading="lazy"
         />
         <div
           data-aos={animate}

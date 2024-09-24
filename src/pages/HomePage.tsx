@@ -37,6 +37,7 @@ export default function HomePage() {
             src="/images/profile/profile_1.jpg"
             alt=""
             width="100%"
+            loading="lazy"
           />
         </div>
       </div>
