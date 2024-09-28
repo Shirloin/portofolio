@@ -13,7 +13,7 @@ export default function MenuSheet() {
       </button>
       {isOpen && (
         <div
-          className={`absolute inset-0 h-screen overflow-hidden bg-white p-4 font-bold transition-all duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+          className={`absolute inset-0 h-screen overflow-hidden bg-white p-4 font-bold transition-all duration-300 ${isOpen ? "translate-x-full" : "translate-x-0"}`}
         >
           <div className="flex h-full flex-col">
             <button
