@@ -12,6 +12,6 @@ RUN npm run build
 
 RUN npm i -g serve
 
-EXPOSE 4321
+EXPOSE 9876
 
 CMD ["serve", "-s", "dist"]

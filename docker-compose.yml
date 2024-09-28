@@ -4,4 +4,4 @@ services:
     image: riccardo006/shirloin:latest
     container_name: shirloin
     ports:
-      - "4321:3000"
+      - "9876:3000"
