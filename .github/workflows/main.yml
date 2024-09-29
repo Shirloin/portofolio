@@ -51,4 +51,4 @@ jobs:
             cd shirloin
             curl -o docker-compose.yml https://raw.githubusercontent.com/shirloin/portofolio/main/docker-compose.yml
             docker pull ${{secrets.DOCKERHUB_USERNAME}}/shirloin:latest
-            docker-compose up -d
+            docker compose up -d
