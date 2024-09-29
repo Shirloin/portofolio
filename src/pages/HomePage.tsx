@@ -17,7 +17,7 @@ export default function HomePage() {
           <div className="animate__animated animate__fadeInLeft mt-4 flex flex-wrap gap-6">
             <a
               className="social-icon"
-              href="https://www.linkedin.com/in/riccardo-540404251/"
+              href="https://www.linkedin.com/in/riccardo-r-540404251/"
               target="_blank"
             >
               <i className="bi bi-linkedin"></i>
