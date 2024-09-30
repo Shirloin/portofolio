@@ -1,8 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function MenuSheet() {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasInteracted, setHasInteracted] = useState(false);
+  useEffect(() => {
+    if (isOpen) {
+      setHasInteracted(true);
+    }
+  }, [isOpen]);
   return (
     <>
       <button
@@ -12,7 +18,13 @@ export default function MenuSheet() {
         <i className="bi bi-list"></i>
       </button>
       <div
-        className={`animate__animated absolute inset-0 h-screen overflow-hidden bg-white p-4 font-bold transition-all duration-300 ${isOpen ? "animate__fadeInRight" : "animate__fadeOutRight opacity-0"}`}
+        className={`animate__animated absolute inset-0 h-screen overflow-hidden bg-white p-4 font-bold transition-all duration-300 ${
+          isOpen
+            ? "animate__fadeInRight"
+            : hasInteracted
+              ? "animate__fadeOutRight opacity-0"
+              : "hidden"
+        }`}
       >
         <div className="flex h-full flex-col">
           <button
