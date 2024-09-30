@@ -26,6 +26,10 @@ const certificateList: ICertificate[] = [
     link: "https://coursera.org/share/80bdbcb494de060bd5890618b346ad2b",
     image: "/images/certificate/AdvancedProgrammingInKotlin.jpeg",
   },
+  {
+    link: "https://coursera.org/share/db53587871101a5fa72f04addc52129d",
+    image: "/images/certificate/WorkingWithDataInAndroid.jpeg",
+  },
 ];
 
 export default function CertificationPage() {
