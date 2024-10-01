@@ -30,6 +30,10 @@ const certificateList: ICertificate[] = [
     link: "https://coursera.org/share/db53587871101a5fa72f04addc52129d",
     image: "/images/certificate/WorkingWithDataInAndroid.jpeg",
   },
+  {
+    link: "https://coursera.org/share/7ceb9ed368f579e5906acecc241d9e4c",
+    image: "/images/certificate/MobileDevelopmentAndJavascript.jpeg",
+  },
 ];
 
 export default function CertificationPage() {
