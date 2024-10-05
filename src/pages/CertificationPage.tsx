@@ -38,6 +38,10 @@ const certificateList: ICertificate[] = [
     link: "https://coursera.org/share/05b5320af9f01e23e9a4ae8692445577",
     image: "/images/certificate/ReactBasics.jpeg",
   },
+  {
+    link: "https://coursera.org/share/34f21eb1ef7f3747247f400f5364b26a",
+    image: "/images/certificate/ReactNative.jpeg",
+  },
 ];
 
 export default function CertificationPage() {
