@@ -42,6 +42,10 @@ const certificateList: ICertificate[] = [
     link: "https://coursera.org/share/34f21eb1ef7f3747247f400f5364b26a",
     image: "/images/certificate/ReactNative.jpeg",
   },
+  {
+    link: "https://coursera.org/share/e372efbf51e86fe2804f5c25bf9d8398",
+    image: "/images/certificate/AndroidAppCapstone.jpeg",
+  },
 ];
 
 export default function CertificationPage() {
