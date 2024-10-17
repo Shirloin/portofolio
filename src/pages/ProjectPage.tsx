@@ -7,8 +7,17 @@ const projects: IProject[] = [
     description:
       "Easy Buy is an e-commerce site that supports buying and selling products. It features product search, chat, and a shopping cart functionality.",
     thumbnail: "/images/project/easybuy.png",
-    stack: ["React", "ExpressJs", "MongoDB", "NodeJs", "Tailwind"],
-    github: "https://github.com/shirloin/frontend-easy-buy/",
+    stack: ["React", "Mongoose", "MongoDB", "NodeJs", "Socket IO", "Tailwind", "Docker", "CI/CD", "Github Action"],
+    code: [
+      {
+        name: "Frontend Code",
+        github: "https://github.com/shirloin/frontend-easy-buy/"
+      },
+      {
+        name: "Backend Code",
+        github: "https://github.com/shirloin/backend-easy-buy/"
+      }
+    ],
     demo: "https://easy-buy.shirloin.my.id/",
   },
   {
@@ -16,8 +25,13 @@ const projects: IProject[] = [
     description:
       "Job Fit CV is a web application for student in Binus University to create a nice portofolio and find a suitable job for their enrichment career.",
     thumbnail: "/images/project/job-fit-cv.png",
-    stack: ["NextJS", "Tailwind", "Prisma", "Postgresql"],
-    github: "https://github.com/shirloin/job-fit-cv",
+    stack: ["NextJS", "Tailwind", "Prisma", "Postgresql", "Docker", "CI/CD", "Github Action"],
+    code: [
+      {
+        name: "Code",
+        github: "https://github.com/shirloin/job-fit-cv/"
+      },
+    ],
     demo: "https://job-fit-cv.shirloin.my.id/",
   },
   {
@@ -26,7 +40,12 @@ const projects: IProject[] = [
       "CodeXchange is a web application for developers, designed as a platform to share and debug code collaboratively. It provides an interactive space where developers can post their code snippets, problems, or projects they are working on, inviting others to review, debug, and suggest improvements",
     thumbnail: "/images/project/codexchange.png",
     stack: ["Laravel", "MySQL", "Tailwind"],
-    github: "https://github.com/shirloin/codexchange",
+    code: [
+      {
+        name: "Code",
+        github: "https://github.com/shirloin/codexchange/"
+      },
+    ],
     demo: "https://codexchange.shirloin.my.id/",
   },
   {
@@ -35,8 +54,52 @@ const projects: IProject[] = [
       "Aora is a mobile application that allow users to share videos",
     thumbnail: "/images/project/aora.png",
     stack: ["React Native", "Nativewind", "Appwrite"],
-    github: "https://github.com/shirloin/aora",
+    code: [
+      {
+        name: "Code",
+        github: "https://github.com/shirloin/aora/"
+      },
+    ],
   },
+  {
+    title: "CinemaX231",
+    description: "Cinemax231 is a mobile app for booking cinema tickets, with features for users to order tickets and admins to manage movie listings.",
+    thumbnail: "/images/project/cinemax231.png",
+    stack: ["Android", "Kotlin", "Firebase"],
+    code: [
+      {
+        name: "Code",
+        github: "https://github.com/shirloin/cinemax231"
+      }
+    ],
+    demo: "https://play.google.com/store/apps/details?id=edu.bluejack_231.cinemax231"
+  },
+  {
+    title: "Farebook",
+    description: "Farebook is a web clone of Facebook, designed to replicate its core features and functionalities for social networking, allowing users to connect, share, and interact with friends and communities online.",
+    thumbnail: "/images/project/farebook.png",
+    stack: ["ReactJs", "Typescript", "GO", "GraphQL API", "PostgreSQL", "Firebase"],
+    code: [
+      {
+        name: "Code",
+        github: "https://github.com/shirloin/farebook"
+      }
+    ],
+  },
+  {
+    title: "Monster Funter",
+    description: "Monster Funter  is an RPG where players explore mazes and battle monsters. The main challenge is defeating the legendary Glavenus, a powerful creature threatening villagers. Players use their characters' skills to ensure the safety of the community.",
+    thumbnail: "/images/project/monsterfunter.png",
+    stack: ["Unity", "C#"],
+    code: [
+      {
+        name: "Code",
+        github: "https://github.com/shirloin/monster-funter"
+      }
+    ],
+  },
+
+
 ];
 
 export default function ProjectPage() {
@@ -54,7 +117,7 @@ export default function ProjectPage() {
               title={p.title}
               description={p.description}
               thumbnail={p.thumbnail}
-              github={p.github}
+              code={p.code}
               demo={p.demo}
               stack={p.stack}
             />

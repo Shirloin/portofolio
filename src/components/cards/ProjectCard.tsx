@@ -1,3 +1,5 @@
+import { IGithub } from "../../interfaces/IGithub";
+
 interface ProjectCardProps {
   index?: number;
   thumbnail?: string;
@@ -5,7 +7,7 @@ interface ProjectCardProps {
   title?: string;
   description?: string;
   stack?: string[];
-  github?: string;
+  code?: IGithub[];
   demo?: string;
 }
 
@@ -15,7 +17,7 @@ export default function ProjectCard({
   title,
   description,
   stack,
-  github,
+  code,
   demo,
 }: ProjectCardProps) {
   const animate = index! % 2 == 0 ? "fade-right" : "fade-left";
@@ -46,15 +48,19 @@ export default function ProjectCard({
               </p>
             ))}
           </div>
-          <div className="mt-4 flex w-full max-w-xl items-center justify-center gap-8 font-semibold">
-            <a
-              href={github}
-              target="_blank"
-              className="flex items-center gap-1"
-            >
-              <p>Code</p>
-              <i className="bi bi-github"></i>
-            </a>
+          <div className="mt-8 flex flex-wrap w-full max-w-xl items-center justify-center  gap-4 space-x-8 font-semibold">
+            {
+              code?.map((c) => (
+                <a
+                  href={c.github}
+                  target="_blank"
+                  className="flex items-center gap-1"
+                >
+                  <p>{c.name}</p>
+                  <i className="bi bi-github"></i>
+                </a>
+              ))
+            }
             {demo && (
               <a
                 href={demo}
