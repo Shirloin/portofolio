@@ -24,9 +24,11 @@ export default function ProjectCard({
   return (
     <>
       <div
+
         className={`animate__animated animate__fadeInLeft my-10 flex w-full max-w-lg flex-col items-start gap-8 lg:my-20 lg:max-w-4xl ${index! % 2 == 1 ? "lg:flex-row-reverse" : "lg:flex-row"}`}
       >
         <img
+          id="cardHover"
           data-aos={animate}
           className="aspect-video w-full max-w-lg rounded-lg border bg-white object-fill shadow-md"
           src={thumbnail}

@@ -55,6 +55,7 @@ export default function ContactPage() {
           </p>
           <p className="font-semibold">Let's create something together</p>
           <a
+            id="cardHover"
             href="mailto:riccardo8902@gmail.com"
             className="flex items-center gap-4 rounded-md bg-white p-4 text-start shadow"
           >
@@ -74,40 +75,44 @@ export default function ContactPage() {
         >
           <h1 className="text-xl font-semibold">Send me a message</h1>
           <input
+            id="cardHover"
             onChange={handleChange}
             value={formData.fullname}
-            className="rounded-md border p-2"
+            className="rounded-md border p-2 hover:cursor-default"
             placeholder="Full name"
             type="text"
             name="fullname"
           />
           <input
+            id="cardHover"
             onChange={handleChange}
             value={formData.email}
-            className="rounded-md border p-2"
+            className="rounded-md border p-2 hover:cursor-default"
             placeholder="Email address"
             type="text"
             name="email"
           />
           <input
+            id="cardHover"
             onChange={handleChange}
             value={formData.subject}
-            className="rounded-md border p-2"
+            className="rounded-md border p-2 hover:cursor-default"
             placeholder="Subject"
             type="text"
             name="subject"
           />
           <textarea
+            id="cardHover"
             onChange={handleChange}
             value={formData.message}
-            className="h-32 rounded-md border p-2"
+            className="h-32 rounded-md border p-2 hover:cursor-default"
             placeholder="Message..."
             name="message"
-            id=""
           ></textarea>
           <button
+            id="cardHover"
             type="submit"
-            className="w-full rounded-md bg-black p-2 text-white"
+            className="w-full rounded-md bg-black p-2 text-white "
           >
             Send Message
           </button>
