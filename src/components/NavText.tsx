@@ -10,6 +10,7 @@ export default function NavText({ title, className, to }: NavTextProps) {
   return (
     <>
       <NavLink
+        id="cardHover"
         to={to}
         className={({ isActive }) =>
           `nav-text group ${isActive ? "active" : ""} ${className}`

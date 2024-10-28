@@ -20,14 +20,14 @@ export default function HomePage() {
               href="https://www.linkedin.com/in/riccardo-r-540404251/"
               target="_blank"
             >
-              <i className="bi bi-linkedin"></i>
+              <i id="cardHover" className="bi bi-linkedin"></i>
             </a>
             <a
               className="social-icon"
               href="https://github.com/Shirloin"
               target="_blank"
             >
-              <i className="bi bi-github"></i>
+              <i id="cardHover" className="bi bi-github"></i>
             </a>
           </div>
         </div>

@@ -50,25 +50,28 @@ export default function ProjectCard({
           </div>
           <div className="mt-8 flex flex-wrap w-full max-w-xl items-center justify-center  gap-4 space-x-8 font-semibold">
             {
-              code?.map((c) => (
+              code?.map((c, index) => (
                 <a
+
+                  key={index}
                   href={c.github}
                   target="_blank"
-                  className="flex items-center gap-1"
+                  className="flex items-center gap-1 cursor-pointer"
                 >
-                  <p>{c.name}</p>
-                  <i className="bi bi-github"></i>
+                  <p id="cardHover">{c.name}</p>
+                  <i id="cardHover" className="bi bi-github"></i>
                 </a>
               ))
             }
             {demo && (
               <a
+
                 href={demo}
                 target="_blank"
                 className="flex items-center gap-1"
               >
-                <p>Live Demo</p>
-                <i className="fas fa-external-link-alt"></i>
+                <p id="cardHover">Live Demo</p>
+                <i id="cardHover" className="fas fa-external-link-alt"></i>
               </a>
             )}
           </div>

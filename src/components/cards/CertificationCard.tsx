@@ -15,6 +15,7 @@ export default function CertificationCard({
         target="_blank"
       >
         <img
+          id="cardHover"
           className="h-full w-full rounded-lg border object-contain"
           src={certificate.image}
           alt=""
