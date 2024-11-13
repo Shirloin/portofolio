@@ -4,7 +4,7 @@ import NavText from "./NavText";
 export default function Navbar() {
   return (
     <>
-      <header className="fixed top-0 z-50 w-full bg-white shadow-md shadow-gray-100">
+      <header className="fixed top-0 z-50 w-full bg-gray-50 shadow-md shadow-gray-100">
         <div className="mx-auto flex max-w-[80%] items-center justify-between py-4">
           <div className="logo text-xl font-extrabold">
             <a href="/" id="cardHover" className="no-underline">
