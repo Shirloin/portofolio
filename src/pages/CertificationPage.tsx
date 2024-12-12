@@ -2,10 +2,12 @@ import CertificationCard from "../components/cards/CertificationCard";
 import { ICertificate } from "../interfaces/ICertificate";
 
 const certificateList: ICertificate[] = [
-
   {
     link: "https://coursera.org/share/4881e76dae49b391e5da7a27dac7c874",
     image: "/images/certificate/MetaAndroidDeveloper.jpeg",
+  },
+  {
+    image: "/images/certificate/InnovationAward.png",
   },
   {
     link: "https://coursera.org/share/4495e44a9580a23bffa33309358b627f",

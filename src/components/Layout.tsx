@@ -10,6 +10,13 @@ export default function Layout() {
         <Cursor />
         <Toaster />
         <Navbar />
+        {/* <audio
+          src="/musics/theme.mp3"
+          controls
+          autoPlay
+          loop
+          className="hidden"
+        /> */}
         <div className="justfiy-start z-10 mx-auto flex w-full flex-grow flex-col items-center md:justify-center">
           <Outlet />
         </div>

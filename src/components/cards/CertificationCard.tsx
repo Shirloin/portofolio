@@ -11,8 +11,8 @@ export default function CertificationCard({
     <>
       <a
         className="animate__animated animate__zoomIn max-w-xl"
-        href={certificate.link}
-        target="_blank"
+        href={certificate.link || undefined}
+        target={certificate.link ? "_blank" : undefined}
       >
         <img
           id="cardHover"
