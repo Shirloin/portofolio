@@ -24,7 +24,6 @@ export default function ProjectCard({
   return (
     <>
       <div
-
         className={`animate__animated animate__fadeInLeft my-10 flex w-full max-w-lg flex-col items-start gap-8 lg:my-20 lg:max-w-4xl ${index! % 2 == 1 ? "lg:flex-row-reverse" : "lg:flex-row"}`}
       >
         <img
@@ -50,24 +49,20 @@ export default function ProjectCard({
               </p>
             ))}
           </div>
-          <div className="mt-8 flex flex-wrap w-full max-w-xl items-center justify-center  gap-4 space-x-8 font-semibold">
-            {
-              code?.map((c, index) => (
-                <a
-
-                  key={index}
-                  href={c.github}
-                  target="_blank"
-                  className="flex items-center gap-1 cursor-pointer"
-                >
-                  <p id="cardHover">{c.name}</p>
-                  <i id="cardHover" className="bi bi-github"></i>
-                </a>
-              ))
-            }
+          <div className="mt-8 flex w-full max-w-xl flex-wrap items-center justify-center gap-4 space-x-8 font-semibold">
+            {code?.map((c, index) => (
+              <a
+                key={index}
+                href={c.github}
+                target="_blank"
+                className="flex cursor-pointer items-center gap-1"
+              >
+                <p id="cardHover">{c.name}</p>
+                <i id="cardHover" className="bi bi-github"></i>
+              </a>
+            ))}
             {demo && (
               <a
-
                 href={demo}
                 target="_blank"
                 className="flex items-center gap-1"
