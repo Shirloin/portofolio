@@ -7,7 +7,13 @@ const projects: IProject[] = [
     description:
       "Metareads is an innovative web application for reading books online, built on advanced Web3 technology, ICP (Internet Computer Protocol), Internet Identity, and Artificial Intelligence.  With powerful AI integration, users can summarize paragraphs, making it easier to grasp key ideas and enhance their reading experience.",
     thumbnail: "/images/project/metareads.png",
-    stack: ["ICP Web3", "React", "Typescript", "Rust"],
+    stack: [
+      "ICP Web3",
+      "React",
+      "Typescript",
+      "Rust",
+      "3rd Place Winner, Hackathon 8.0",
+    ],
     code: [
       {
         name: "Code",
