@@ -5,3 +5,4 @@ services:
     container_name: shirloin
     ports:
       - "9876:3000"
+    restart: on-failure
