@@ -3,59 +3,63 @@ import { ICertificate } from "../interfaces/ICertificate";
 
 const certificateList: ICertificate[] = [
   {
+    link: "https://www.instagram.com/p/DDKDUNFTBT8/?img_index=1",
+    image: "/images/certificate/HackathonICP.png",
+  },
+  {
     link: "https://coursera.org/share/4881e76dae49b391e5da7a27dac7c874",
-    image: "/images/certificate/MetaAndroidDeveloper.jpeg",
+    image: "/images/certificate/MetaAndroidDeveloper.png",
   },
   {
     image: "/images/certificate/InnovationAward.png",
   },
   {
     link: "https://coursera.org/share/4495e44a9580a23bffa33309358b627f",
-    image: "/images/certificate/IntroToAndroidMobileAppDev.jpeg",
+    image: "/images/certificate/IntroToAndroidMobileAppDev.png",
   },
   {
     link: "https://coursera.org/share/dc52f8355cd5eab82a1c0f87852a2fc9",
-    image: "/images/certificate/VersionControl.jpeg",
+    image: "/images/certificate/VersionControl.png",
   },
   {
     link: "https://coursera.org/share/2a605325923c2437edbf1fb0d5321e41",
-    image: "/images/certificate/PrinciplesOfUXUIDesign.jpeg",
+    image: "/images/certificate/PrinciplesOfUXUIDesign.png",
   },
   {
     link: "https://coursera.org/share/d5f0379703666c87d09c82624267415c",
-    image: "/images/certificate/ProgrammingFundamentalsInKotlin.jpeg",
+    image: "/images/certificate/ProgrammingFundamentalsInKotlin.png",
   },
   {
     link: "https://coursera.org/share/a1dc26f9580ca7e1748a77681632351e",
-    image: "/images/certificate/CreateTheUserInterfaceInAndroidStudio.jpeg",
+    image: "/images/certificate/CreateTheUserInterfaceInAndroidStudio.png",
   },
   {
     link: "https://coursera.org/share/80bdbcb494de060bd5890618b346ad2b",
-    image: "/images/certificate/AdvancedProgrammingInKotlin.jpeg",
+    image: "/images/certificate/AdvancedProgrammingInKotlin.png",
   },
   {
     link: "https://coursera.org/share/db53587871101a5fa72f04addc52129d",
-    image: "/images/certificate/WorkingWithDataInAndroid.jpeg",
+    image: "/images/certificate/WorkingWithDataInAndroid.png",
   },
   {
     link: "https://coursera.org/share/7ceb9ed368f579e5906acecc241d9e4c",
-    image: "/images/certificate/MobileDevelopmentAndJavascript.jpeg",
+    image: "/images/certificate/MobileDevelopmentAndJavascript.png",
   },
   {
     link: "https://coursera.org/share/05b5320af9f01e23e9a4ae8692445577",
-    image: "/images/certificate/ReactBasics.jpeg",
+    image: "/images/certificate/ReactBasics.png",
   },
   {
     link: "https://coursera.org/share/34f21eb1ef7f3747247f400f5364b26a",
-    image: "/images/certificate/ReactNative.jpeg",
+    image: "/images/certificate/ReactNative.png",
   },
   {
     link: "https://coursera.org/share/e372efbf51e86fe2804f5c25bf9d8398",
-    image: "/images/certificate/AndroidAppCapstone.jpeg",
+    image: "/images/certificate/AndroidAppCapstone.png",
   },
   {
     link: "https://coursera.org/share/fed16238548238f0a961c6d75b73cae1",
-    image: "/images/certificate/CodingInteriewPreparation.jpeg",
+    image: "/images/certificate/CodingInteriewPreparation.png",
   },
 ];
 
