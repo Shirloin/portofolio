@@ -10,7 +10,7 @@ export default function CertificationCard({
   return (
     <>
       <a
-        className="animate__animated animate__zoomIn h-[320px] max-w-[640px]"
+        className="animate__animated animate__zoomIn h-[320px] w-full max-w-[640px]"
         href={certificate.link || undefined}
         target={certificate.link ? "_blank" : undefined}
       >

@@ -3,6 +3,10 @@ import { ICertificate } from "../interfaces/ICertificate";
 
 const certificateList: ICertificate[] = [
   {
+    link: "https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/b8f05d37-519e-401f-8369-7bf1a9867969-riccardo-7e685681-7f4a-4115-bdef-691667c25f06-certificate.pdf",
+    image: "/images/certificate/CKAD.jpg",
+  },
+  {
     link: "https://www.instagram.com/p/DDKDUNFTBT8/?img_index=1",
     image: "/images/certificate/HackathonICP.png",
   },
