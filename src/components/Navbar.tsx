@@ -8,7 +8,7 @@ export default function Navbar() {
         <div className="mx-auto flex max-w-[80%] items-center justify-between py-4">
           <div className="logo text-xl font-extrabold">
             <a href="/" id="cardHover" className="no-underline">
-              Riccardo.dev
+              Riccardo
             </a>
           </div>
           <input type="checkbox" id="click" className="hidden" />
