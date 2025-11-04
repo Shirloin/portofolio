@@ -19,6 +19,7 @@ const projects: IProject[] = [
       "Github Action",
       "Grafana",
       "Prometheus",
+      "Terraform",
       "OpenTelemetry",
       "Ray Framework",
     ],
