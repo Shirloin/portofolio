@@ -3,6 +3,46 @@ import { IProject } from "../interfaces/IProject";
 
 const projects: IProject[] = [
   {
+    title: "InCustoms",
+    description:
+      "InCustoms is a web app that uses AI-powered document processing to automate data extraction and accelerate data entry — a company-owned product of PT Indotama Teknologi Inovasi (PT INTI).",
+    thumbnail: "/images/project/incustoms.png",
+    stack: [
+      "Angular",
+      "Spring Boot",
+      "Java",
+      "TypeScript",
+      "Tailwind CSS",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "Github Action",
+      "Grafana",
+      "Prometheus",
+      "OpenTelemetry",
+      "Ray Framework",
+    ],
+    demo: "https://incustoms.id",
+  },
+  {
+    title: "InMeterai",
+    description:
+      "InMeterai is a customizable e-stamping platform that enabling users to apply digital stamps and define reusable document layouts — a company-owned product of PT Indotama Teknologi Inovasi (PT INTI).",
+    thumbnail: "/images/project/inmeterai.png",
+    stack: [
+      "React",
+      "Spring Boot",
+      "Java",
+      "TypeScript",
+      "Tailwind CSS",
+      "Docker",
+      "CI/CD",
+      "Github Action",
+    ],
+    demo: "https://inmeterai.id",
+  },
+
+  {
     title: "MetaReads",
     description:
       "Metareads is an innovative web application for reading books online, built on advanced Web3 technology, ICP (Internet Computer Protocol), Internet Identity, and Artificial Intelligence.  With powerful AI integration, users can summarize paragraphs, making it easier to grasp key ideas and enhance their reading experience.",
