@@ -61,10 +61,10 @@ const certificateList: ICertificate[] = [
     link: "https://coursera.org/share/e372efbf51e86fe2804f5c25bf9d8398",
     image: "/images/certificate/AndroidAppCapstone.png",
   },
-  {
-    link: "https://coursera.org/share/fed16238548238f0a961c6d75b73cae1",
-    image: "/images/certificate/CodingInteriewPreparation.png",
-  },
+  // {
+  //   link: "https://coursera.org/share/fed16238548238f0a961c6d75b73cae1",
+  //   image: "/images/certificate/CodingInteriewPreparation.png",
+  // },
 ];
 
 export default function CertificationPage() {
