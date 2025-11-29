@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import ProjectPage from "../pages/ProjectPage";
 import CertificationPage from "../pages/CertificationPage";
 import ContactPage from "../pages/ContactPage";
+import BadCodePage from "../pages/BadCodePage";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactPage />,
+      },
+      {
+        path: "/bad-code",
+        element: <BadCodePage />,
       },
     ],
   },
