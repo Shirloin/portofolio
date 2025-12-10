@@ -41,7 +41,7 @@ export default function HomePage() {
             <a
               id="cardHover"
               href={resume}
-              download="RiccardoResume.pdf"
+              download="Riccardo.pdf"
               className="flex items-center gap-2 rounded-md border-2 border-primary px-4 py-2 text-sm font-semibold text-primary transition-all hover:bg-primary hover:text-white"
             >
               <i className="bi bi-download"></i>
