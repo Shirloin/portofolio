@@ -4,15 +4,15 @@ import { projects } from "../constants/projects";
 
 export default function ProjectPage() {
   // Extract all unique tech stacks from all projects
-  const allTechStacks = useMemo(() => {
-    const techSet = new Set<string>();
-    projects.forEach((project) => {
-      project.stack?.forEach((tech) => {
-        techSet.add(tech);
-      });
-    });
-    return Array.from(techSet).sort();
-  }, []);
+  // const allTechStacks = useMemo(() => {
+  //   const techSet = new Set<string>();
+  //   projects.forEach((project) => {
+  //     project.stack?.forEach((tech) => {
+  //       techSet.add(tech);
+  //     });
+  //   });
+  //   return Array.from(techSet).sort();
+  // }, []);
 
   // State for selected filters
   const [selectedFilters, setSelectedFilters] = useState<Set<string>>(
@@ -20,17 +20,17 @@ export default function ProjectPage() {
   );
 
   // Toggle filter selection
-  const toggleFilter = (tech: string) => {
-    setSelectedFilters((prev) => {
-      const newSet = new Set(prev);
-      if (newSet.has(tech)) {
-        newSet.delete(tech);
-      } else {
-        newSet.add(tech);
-      }
-      return newSet;
-    });
-  };
+  // const toggleFilter = (tech: string) => {
+  //   setSelectedFilters((prev) => {
+  //     const newSet = new Set(prev);
+  //     if (newSet.has(tech)) {
+  //       newSet.delete(tech);
+  //     } else {
+  //       newSet.add(tech);
+  //     }
+  //     return newSet;
+  //   });
+  // };
 
   // Clear all filters
   const clearFilters = () => {
