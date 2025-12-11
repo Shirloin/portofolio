@@ -1,26 +1,24 @@
-import { IGithub } from "../../interfaces/IGithub";
+import { useMemo } from "react";
+import { Link } from "react-router-dom";
+import { IProject } from "../../interfaces/IProject";
 
 interface ProjectCardProps {
   index?: number;
-  thumbnail?: string;
-  images?: string[];
-  title?: string;
-  description?: string;
-  stack?: string[];
-  code?: IGithub[];
-  demo?: string;
+  project: IProject;
 }
 
-export default function ProjectCard({
-  index,
-  thumbnail,
-  title,
-  description,
-  stack,
-  code,
-  demo,
-}: ProjectCardProps) {
-  const animate = index! % 2 == 0 ? "fade-right" : "fade-left";
+const createSlug = (title: string): string => {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+};
+
+export default function ProjectCard({ index, project }: ProjectCardProps) {
+  const animate = useMemo(() => {
+    return index! % 2 == 0 ? "fade-right" : "fade-left";
+  }, [index]);
+
   return (
     <>
       <div
@@ -29,8 +27,8 @@ export default function ProjectCard({
         <img
           id="cardHover"
           data-aos={animate}
-          className="aspect-video w-full max-w-lg rounded-lg border bg-white object-fill shadow-md"
-          src={thumbnail}
+          className="aspect-video w-full max-w-lg cursor-pointer rounded-lg border bg-white object-fill shadow-md dark:border-zinc-800 dark:bg-zinc-900"
+          src={project.thumbnail}
           alt=""
           loading="lazy"
         />
@@ -38,38 +36,49 @@ export default function ProjectCard({
           data-aos={animate}
           className="mx-auto flex h-full w-full flex-grow flex-col items-center"
         >
-          <h1 className="text-center text-xl font-bold uppercase">{title}</h1>
+          <h1 className="text-center text-xl font-bold uppercase">
+            {project.title}
+          </h1>
           <p className="mt-2 text-center leading-tight tracking-tight">
-            {description}
+            {project.description}
           </p>
           <div className="mt-4 flex flex-wrap justify-center gap-4 text-wrap leading-tight">
-            {stack?.map((tech) => (
+            {project.stack?.map((tech) => (
               <p key={tech} className="font-bold">
                 {tech}
               </p>
             ))}
           </div>
           <div className="mt-8 flex w-full max-w-xl flex-wrap items-center justify-center gap-4 space-x-8 font-semibold">
-            {code?.map((c, index) => (
-              <a
+            {project.code?.map((c, index) => (
+              <Link
                 key={index}
-                href={c.github}
+                to={c.github || ""}
                 target="_blank"
                 className="flex cursor-pointer items-center gap-1"
               >
                 <p id="cardHover">{c.name}</p>
                 <i id="cardHover" className="bi bi-github"></i>
-              </a>
+              </Link>
             ))}
-            {demo && (
-              <a
-                href={demo}
+            {project.demo && (
+              <Link
+                to={project.demo || ""}
                 target="_blank"
                 className="flex items-center gap-1"
               >
                 <p id="cardHover">Live Demo</p>
                 <i id="cardHover" className="fas fa-external-link-alt"></i>
-              </a>
+              </Link>
+            )}
+            {project.details && (
+              <Link
+                to={`/project-detail/${createSlug(project.title || "")}`}
+                className="flex items-center gap-1"
+              >
+                <p id="cardHover">View Detail</p>
+                <i id="cardHover" className="fas fa-external-link-alt"></i>
+              </Link>
             )}
           </div>
         </div>

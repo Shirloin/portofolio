@@ -4,6 +4,8 @@ import Layout from "../components/Layout";
 import ProjectPage from "../pages/ProjectPage";
 import CertificationPage from "../pages/CertificationPage";
 import ContactPage from "../pages/ContactPage";
+import ProjectDetailPage from "../pages/ProjectDetailPage";
+import ExperiencePage from "../pages/ExperiencePage";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,14 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactPage />,
+      },
+      {
+        path: "/project-detail/:slug",
+        element: <ProjectDetailPage />,
+      },
+      {
+        path: "/experience",
+        element: <ExperiencePage />,
       },
     ],
   },

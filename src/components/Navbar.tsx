@@ -1,10 +1,11 @@
 import MenuSheet from "./MenuSheet";
 import NavText from "./NavText";
+import Theme from "./Theme";
 
 export default function Navbar() {
   return (
     <>
-      <header className="fixed top-0 z-50 w-full bg-gray-50">
+      <header className="fixed top-0 z-50 w-full bg-gray-50 text-black dark:bg-zinc-900 dark:text-white">
         <div className="mx-auto flex max-w-[80%] items-center justify-between py-4">
           <div className="logo text-xl font-extrabold">
             <a href="/" id="cardHover" className="no-underline">
@@ -16,10 +17,14 @@ export default function Navbar() {
           <nav className="hidden space-x-8 md:flex">
             <NavText to="/" title="Home" />
             <NavText to="/project" title="Projects" />
+            <NavText to="/experience" title="Experiences" />
             <NavText to="/certification" title="Certifications" />
             <NavText to="/contact" title="Contact" />
           </nav>
-          <MenuSheet />
+          <div className="flex items-center gap-x-4">
+            <Theme />
+            <MenuSheet />
+          </div>
         </div>
       </header>
     </>

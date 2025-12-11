@@ -1,213 +1,115 @@
+import { useState, useMemo } from "react";
 import ProjectCard from "../components/cards/ProjectCard";
-import { IProject } from "../interfaces/IProject";
-
-const projects: IProject[] = [
-  {
-    title: "InCustoms",
-    description:
-      "InCustoms is a web app that uses AI-powered document processing to automate data extraction and accelerate data entry — a company-owned product of PT Indotama Teknologi Inovasi (PT INTI).",
-    thumbnail: "/images/project/incustoms.png",
-    stack: [
-      "Angular",
-      "Spring Boot",
-      "Java",
-      "TypeScript",
-      "Tailwind CSS",
-      "Docker",
-      "Kubernetes",
-      "CI/CD",
-      "Github Action",
-      "Grafana",
-      "Prometheus",
-      "Terraform",
-      "OpenTelemetry",
-      "Ray Framework",
-    ],
-    demo: "https://incustoms.id",
-  },
-  {
-    title: "InMeterai",
-    description:
-      "InMeterai is a customizable e-stamping platform that enabling users to apply digital stamps and define reusable document layouts — a company-owned product of PT Indotama Teknologi Inovasi (PT INTI).",
-    thumbnail: "/images/project/inmeterai.png",
-    stack: [
-      "React",
-      "Spring Boot",
-      "Java",
-      "TypeScript",
-      "Tailwind CSS",
-      "Docker",
-      "CI/CD",
-      "Github Action",
-    ],
-    demo: "https://inmeterai.id",
-  },
-
-  {
-    title: "MetaReads",
-    description:
-      "Metareads is an innovative web application for reading books online, built on advanced Web3 technology, ICP (Internet Computer Protocol), Internet Identity, and Artificial Intelligence.  With powerful AI integration, users can summarize paragraphs, making it easier to grasp key ideas and enhance their reading experience.",
-    thumbnail: "/images/project/metareads.png",
-    stack: [
-      "ICP Web3",
-      "React",
-      "Typescript",
-      "Rust",
-      "3rd Place Winner, Hackathon 8.0",
-    ],
-    code: [
-      {
-        name: "Code",
-        github: "https://github.com/Shirloin/MetaReads",
-      },
-    ],
-  },
-  {
-    title: "Easy Buy",
-    description:
-      "Easy Buy is an e-commerce site that supports buying and selling products. It features product search, chat, and a shopping cart functionality.",
-    thumbnail: "/images/project/easybuy.png",
-    stack: [
-      "React",
-      "Mongoose",
-      "MongoDB",
-      "NodeJs",
-      "Socket IO",
-      "Tailwind",
-      "Docker",
-      "CI/CD",
-      "Github Action",
-    ],
-    code: [
-      {
-        name: "Frontend Code",
-        github: "https://github.com/shirloin/frontend-easy-buy/",
-      },
-      {
-        name: "Backend Code",
-        github: "https://github.com/shirloin/backend-easy-buy/",
-      },
-    ],
-    demo: "https://easy-buy.shirloin.my.id/",
-  },
-  {
-    title: "Job Fit CV",
-    description:
-      "Job Fit CV is a web application for student in Binus University to create a nice portofolio and find a suitable job for their enrichment career.",
-    thumbnail: "/images/project/job-fit-cv.png",
-    stack: [
-      "NextJS",
-      "Tailwind",
-      "Prisma",
-      "Postgresql",
-      "Docker",
-      "CI/CD",
-      "Github Action",
-    ],
-    code: [
-      {
-        name: "Code",
-        github: "https://github.com/shirloin/job-fit-cv/",
-      },
-    ],
-    demo: "https://job-fit-cv.shirloin.my.id/",
-  },
-  {
-    title: "CodeXchange",
-    description:
-      "CodeXchange is a web application for developers, designed as a platform to share and debug code collaboratively. It provides an interactive space where developers can post their code snippets, problems, or projects they are working on, inviting others to review, debug, and suggest improvements",
-    thumbnail: "/images/project/codexchange.png",
-    stack: ["Laravel", "MySQL", "Tailwind"],
-    code: [
-      {
-        name: "Code",
-        github: "https://github.com/shirloin/codexchange/",
-      },
-    ],
-    demo: "https://codexchange.shirloin.my.id/",
-  },
-  {
-    title: "Aora",
-    description:
-      "Aora is a mobile application that allow users to share videos",
-    thumbnail: "/images/project/aora.png",
-    stack: ["React Native", "Nativewind", "Appwrite"],
-    code: [
-      {
-        name: "Code",
-        github: "https://github.com/shirloin/aora/",
-      },
-    ],
-  },
-  {
-    title: "CinemaX231",
-    description:
-      "Cinemax231 is a mobile app for booking cinema tickets, with features for users to order tickets and admins to manage movie listings.",
-    thumbnail: "/images/project/cinemax231.png",
-    stack: ["Android", "Kotlin", "Firebase"],
-    code: [
-      {
-        name: "Code",
-        github: "https://github.com/shirloin/cinemax231",
-      },
-    ],
-    demo: "https://play.google.com/store/apps/details?id=edu.bluejack_231.cinemax231",
-  },
-  {
-    title: "Farebook",
-    description:
-      "Farebook is a web clone of Facebook, designed to replicate its core features and functionalities for social networking, allowing users to connect, share, and interact with friends and communities online.",
-    thumbnail: "/images/project/farebook.png",
-    stack: [
-      "ReactJs",
-      "Typescript",
-      "GO",
-      "GraphQL API",
-      "PostgreSQL",
-      "Firebase",
-    ],
-    code: [
-      {
-        name: "Code",
-        github: "https://github.com/shirloin/farebook",
-      },
-    ],
-  },
-  {
-    title: "Monster Funter",
-    description:
-      "Monster Funter  is an RPG where players explore mazes and battle monsters. The main challenge is defeating the legendary Glavenus, a powerful creature threatening villagers. Players use their characters' skills to ensure the safety of the community.",
-    thumbnail: "/images/project/monsterfunter.png",
-    stack: ["Unity", "C#"],
-    code: [
-      {
-        name: "Code",
-        github: "https://github.com/shirloin/monster-funter",
-      },
-    ],
-  },
-];
+import { projects } from "../constants/projects";
 
 export default function ProjectPage() {
+  // Extract all unique tech stacks from all projects
+  const allTechStacks = useMemo(() => {
+    const techSet = new Set<string>();
+    projects.forEach((project) => {
+      project.stack?.forEach((tech) => {
+        techSet.add(tech);
+      });
+    });
+    return Array.from(techSet).sort();
+  }, []);
+
+  // State for selected filters
+  const [selectedFilters, setSelectedFilters] = useState<Set<string>>(
+    new Set(),
+  );
+
+  // Toggle filter selection
+  const toggleFilter = (tech: string) => {
+    setSelectedFilters((prev) => {
+      const newSet = new Set(prev);
+      if (newSet.has(tech)) {
+        newSet.delete(tech);
+      } else {
+        newSet.add(tech);
+      }
+      return newSet;
+    });
+  };
+
+  // Clear all filters
+  const clearFilters = () => {
+    setSelectedFilters(new Set());
+  };
+
+  // Filter projects based on selected tech stacks
+  const filteredProjects = useMemo(() => {
+    if (selectedFilters.size === 0) {
+      return projects;
+    }
+
+    return projects.filter((project) => {
+      if (!project.stack || project.stack.length === 0) {
+        return false;
+      }
+      // Check if project has at least one of the selected tech stacks
+      return project.stack.some((tech) => selectedFilters.has(tech));
+    });
+  }, [selectedFilters]);
+
   return (
     <>
       <div className="mx-auto my-20 flex flex-grow flex-col px-4 md:my-28">
         <h1 className="text-center text-xl font-bold md:text-3xl">
           Project Lists
         </h1>
-        <div className="flex w-full flex-grow flex-col">
-          {projects.map((p, index) => (
-            <ProjectCard
-              key={index}
-              index={index}
-              title={p.title}
-              description={p.description}
-              thumbnail={p.thumbnail}
-              code={p.code}
-              demo={p.demo}
-              stack={p.stack}
-            />
-          ))}
+
+        {/* Filter Section */}
+        <div className="mx-auto my-8 flex max-w-5xl flex-col gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            {allTechStacks.map((tech) => {
+              const isSelected = selectedFilters.has(tech);
+              return (
+                <button
+                  key={tech}
+                  onClick={() => toggleFilter(tech)}
+                  className={`rounded-full border-2 px-4 py-2 text-sm font-semibold transition-all duration-200 ${
+                    isSelected
+                      ? "border-primary bg-primary text-white dark:border-primary dark:bg-primary dark:text-white"
+                      : "border-zinc-300 bg-white text-zinc-700 hover:border-zinc-400 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:border-zinc-500"
+                  }`}
+                >
+                  {tech}
+                </button>
+              );
+            })}
+          </div>
+          <div className="flex items-center">
+            {selectedFilters.size > 0 && (
+              <button
+                onClick={clearFilters}
+                className="text-sm text-zinc-600 underline-offset-4 hover:underline dark:text-zinc-400"
+              >
+                Clear all ({selectedFilters.size})
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* Projects List */}
+        <div className="flex w-full flex-grow flex-col items-center">
+          {filteredProjects.length > 0 ? (
+            filteredProjects.map((p, index) => (
+              <ProjectCard key={index} index={index} project={p} />
+            ))
+          ) : (
+            <div className="my-20 text-center">
+              <p className="text-lg text-zinc-600 dark:text-zinc-400">
+                No projects found with the selected tech stacks.
+              </p>
+              <button
+                onClick={clearFilters}
+                className="mt-4 text-primary underline-offset-4 hover:underline"
+              >
+                Clear filters
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </>

@@ -9,9 +9,6 @@ export default function HomePage() {
             <span>Hi, It's Me</span> <br />
             <span>Riccardo</span>
           </h1>
-          {/* <p className="animate__animated animate__fadeInLeft mt-2 text-lg font-medium text-gray-600 lg:text-xl">
-            Fullstack and Cloud Platform Engineer
-          </p> */}
 
           <p className="animate__animated animate__fadeInLeft mt-4 border-l-2 border-primary pl-4 text-base font-medium italic text-primary lg:text-lg">
             Like a chef who understands how to create appetizers, main courses

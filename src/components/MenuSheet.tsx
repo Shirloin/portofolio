@@ -50,6 +50,14 @@ export default function MenuSheet() {
           </Link>
           <hr />
           <Link
+            to={"/experience"}
+            onClick={() => setIsOpen(!isOpen)}
+            className="my-2 p-2 text-center text-xl"
+          >
+            Experiences
+          </Link>
+          <hr />
+          <Link
             to={"/certification"}
             onClick={() => setIsOpen(!isOpen)}
             className="my-2 p-2 text-center text-xl"
