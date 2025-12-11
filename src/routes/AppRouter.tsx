@@ -29,7 +29,7 @@ const router = createBrowserRouter([
         element: <ContactPage />,
       },
       {
-        path: "/project-detail/:slug",
+        path: "/project/:slug",
         element: <ProjectDetailPage />,
       },
       {

@@ -73,7 +73,7 @@ export default function ProjectCard({ index, project }: ProjectCardProps) {
             )}
             {project.details && (
               <Link
-                to={`/project-detail/${createSlug(project.title || "")}`}
+                to={`/project/${createSlug(project.title || "")}`}
                 className="flex items-center gap-1"
               >
                 <p id="cardHover">View Detail</p>

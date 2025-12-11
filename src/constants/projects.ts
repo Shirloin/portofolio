@@ -279,7 +279,7 @@ export const projects: IProject[] = [
   {
     title: "Job Fit CV",
     description:
-      "Job Fit CV is a web application for student in Binus University to create a nice portofolio and find a suitable job for their enrichment career.",
+      "Job Fit CV is a web application for students at Binus University to create professional CVs and find suitable job opportunities for their career development.",
     thumbnail: "/images/project/job-fit-cv.png",
     stack: [
       "NextJS",
@@ -297,6 +297,87 @@ export const projects: IProject[] = [
       },
     ],
     demo: "https://job-fit-cv.shirloin.my.id/",
+    overview: [
+      "Job Fit CV is a comprehensive web application designed for Binus University students to create professional CVs and discover job opportunities that match their qualifications. The platform provides role-based access control, allowing both students and administrators to manage their respective tasks efficiently.",
+      "Key features include:\n• Role-Based Access: Separate interfaces for students and administrators\n• CV Creation & Management: Students can create, edit, and download their CVs in multiple formats\n• Job Matching: Intelligent job recommendations based on student CV information\n• Company Management: Administrators can manage company data and job listings\n• Student Management: Complete student account and profile management\n• Bulk Data Import: Support for Excel file uploads for efficient data entry",
+    ],
+    details: [
+      {
+        thumbnails: ["/images/project/job-fit-cv/login-page.png"],
+        title: "1. Login",
+        description: "• User Authentication: Login page with username and password fields\n• Role-Based Access: Supports login for both students and administrators\n• Secure Access: Access the system using registered account credentials\n• Account Management: Login with accounts that are already registered in the application data",
+      },
+      {
+        thumbnails: ["/images/project/job-fit-cv/user-dashboard-page.png", "/images/project/job-fit-cv/admin-dashboard-page.png"],
+        title: "2. Dashboard",
+        description: "• Video Tutorials: Provides tutorial videos explaining how to use features according to each user role\n• Role-Specific Content: Different dashboard content for students and administrators\n• Feature Guidance: Helps users understand and navigate the platform features\n• User Onboarding: Assists new users in getting started with the system",
+      },
+      {
+        thumbnails: ["/images/project/job-fit-cv/insert-company-page.png"],
+        title: "3. Insert New Company",
+        description: "• Company Registration: Form page for adding new company data\n• Single Entry: Add companies one by one by filling in the available fields\n• Bulk Import: Upload Excel files (.xlsx) to add multiple companies at once\n• Admin Only: This feature can only be used by administrators\n• Data Management: Efficiently manage company information in the system",
+      },
+      {
+        thumbnails: ["/images/project/job-fit-cv/admin-view-company-page.png", "/images/project/job-fit-cv/user-view-company-page.png"],
+        title: "4. View Company List",
+        description: "• Company Directory: View all companies registered in the system\n• Admin View: Administrators can see data for all companies\n• Student View: Students can see companies along with job recommendations matching their CV information\n• Job Matching: Intelligent job recommendations based on student CV data\n• Company Information: Access detailed company information and available positions",
+      },
+      {
+        thumbnails: ["/images/project/job-fit-cv/admin-view-company-page.png"],
+        title: "4.1. View Company List – Filter Company",
+        description: "• Company Search: Search for companies by name\n• Program Filter: Filter companies by required programs\n• Position Filter: Filter companies by available positions\n• Advanced Filtering: Combine multiple filters for precise search results\n• Quick Access: Efficiently find relevant companies and job opportunities",
+      },
+      {
+        thumbnails: ["/images/project/job-fit-cv/update-company.png"],
+        title: "5. Update Company",
+        description: "• Company Data Update: Update existing company data in the system\n• Pre-filled Form: System provides a form containing existing company data for modification\n• Save Changes: Users can press the save button to store the changes made\n• Admin Access: This feature can be accessed by administrators\n• Data Maintenance: Keep company information up to date",
+      },
+      {
+        thumbnails: [],
+        title: "6. Delete Company",
+        description: "• Company Removal: Delete unwanted company data from the system\n• Admin Access: This feature can be accessed by administrators\n• Data Management: Maintain clean and relevant company database\n• Confirmation Required: Ensure proper deletion process",
+      },
+      {
+        thumbnails: ["/images/project/job-fit-cv/insert-account-page.png"],
+        title: "7. Insert New Account",
+        description: "• Account Registration: Form page for adding new admin or student accounts\n• Single Entry: Add accounts one by one by filling in the available fields\n• Bulk Import: Upload Excel files (.xlsx) to add multiple accounts at once\n• Admin Only: This feature can only be used by administrators\n• User Management: Efficiently manage user accounts in the system",
+      },
+      {
+        thumbnails: ["/images/project/job-fit-cv/view-student-page.png"],
+        title: "8. View All Student",
+        description: "• Student Directory: View all students registered in the system\n• Student Information: Access comprehensive student data and profiles\n• Student Management: Monitor and manage student accounts\n• Data Overview: Get an overview of all registered students",
+      },
+      {
+        thumbnails: ["/images/project/job-fit-cv/update-student.png"],
+        title: "9. Update Student",
+        description: "• Student Data Update: Update existing student data in the system\n• Pre-filled Form: System provides a form containing existing student data for modification\n• Save Changes: Users can press the save button to store the changes made\n• Admin Access: This feature can be accessed by administrators\n• Profile Maintenance: Keep student information up to date",
+      },
+      {
+        thumbnails: [],
+        title: "10. Delete Student",
+        description: "• Student Removal: Delete unwanted student data from the system\n• Admin Access: This feature can be accessed by administrators\n• Data Management: Maintain clean and relevant student database\n• Confirmation Required: Ensure proper deletion process",
+      },
+      {
+        thumbnails: ["/images/project/job-fit-cv/view-student-cv.png"],
+        title: "11. View Student CV",
+        description: "• CV Viewing: View CVs saved by students\n• Admin Access: This feature can only be accessed by administrators\n• CV Review: Review student CVs for quality and completeness\n• Student Assessment: Assess student qualifications through their CVs",
+      },
+      {
+        thumbnails: ["/images/project/job-fit-cv/create-cv-page.png"],
+        title: "12. Create CV / Edit CV",
+        description: "• CV Creation: Create a new CV or make changes to an existing CV\n• Template Selection: Students can choose from available CV templates\n• Section Editing: Select and edit specific sections of the CV\n• Text Generation: Perform text generation on desired sections using AI\n• Save Functionality: Save button to store changes made to the CV\n• Student Access: This page can only be accessed by students\n• CV Customization: Full control over CV content and formatting",
+      },
+      {
+        thumbnails: ["/images/project/job-fit-cv/saved-cv-page.png"],
+        title: "13. Account – Saved CV",
+        description: "• CV Library: Displays CVs saved by students\n• CV Navigation: Clicking on a saved CV redirects to the edit CV page\n• CV Management: Students can manage and organize their saved CVs\n• Quick Access: Easy access to previously created CVs for editing",
+      },
+      {
+        thumbnails: ["/images/project/job-fit-cv/change-password.png"],
+        title: "14. Account – Change Password",
+        description: "• Password Update: Form for changing password\n• Current Password: Field for entering the current password (must match existing password)\n• New Password: Field for entering the new password\n• Password Confirmation: Field for confirming the new password (must match new password)\n• Save Changes: Press the save button to store password changes\n• Security: Ensures secure password updates with validation",
+      },
+    ],
   },
   {
     title: "CodeXchange",
