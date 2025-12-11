@@ -60,7 +60,7 @@ export default function ProjectPage() {
         </h1>
 
         {/* Filter Section */}
-        <div className="mx-auto my-8 flex max-w-5xl flex-col gap-4">
+        {/* <div className="mx-auto my-8 flex max-w-5xl flex-col gap-4">
           <div className="flex flex-wrap items-center justify-center gap-3">
             {allTechStacks.map((tech) => {
               const isSelected = selectedFilters.has(tech);
@@ -89,7 +89,7 @@ export default function ProjectPage() {
               </button>
             )}
           </div>
-        </div>
+        </div> */}
 
         {/* Projects List */}
         <div className="flex w-full flex-grow flex-col items-center">
