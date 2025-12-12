@@ -42,7 +42,36 @@ export const projects: IProject[] = [
     ],
     demo: "https://inmeterai.id",
   },
-
+  {
+    title: "Automated Log Reviewer ",
+    description: "",
+    thumbnail: "/images/project/log-reviewer.png",
+    stack: [
+      "Python",
+      "FastAPI",
+      "Model Context Protocol (MCP)",
+      "Docker",
+      "Loki"
+    ],
+    code: [
+      {
+        name: "Code",
+        github: "https://github.com/shirloin/mcp-log-reviewer",
+      }
+    ],
+    details: [
+      {
+        thumbnails: ["/images/project/log-reviewer/architecture.png"],
+        title: "1. Architecture Overview",
+        description: "• Loki: Centralized log aggregation and storage system that collects and stores application logs with label-based filtering and time-range queries.\n• MCP Servers: Independent tool providers that expose specialized capabilities via MCP protocol, including Loki Pooler MCP Server for log querying and GitHub MCP Server (official) for repository and project management.\n• Orchestration Layer: Coordinates system operations through MCP Client that manages server connections and LLM Agent that uses available tools to perform intelligent log analysis and automated backlog creation.",
+      },
+      {
+        thumbnails: ["/images/project/log-reviewer/system-flow.png"],
+        title: "2. System Flow",
+        description: "• Scheduler Trigger: System automatically triggers every 5 minutes to check for new error logs.\n• Log Query Phase: Agent calls log_query() tool from Loki Pooler MCP Server to retrieve recent logs from the last 5 minutes.\n• Error Analysis Phase: Agent analyzes log data using LLM capabilities to extract error patterns, messages, and context.\n• Code Investigation Phase: Agent calls GitHub MCP tools to search codebase and investigate root causes of detected errors.\n• Backlog Management Phase: Agent creates or updates GitHub backlog items with error details, code snippets, and file references.\n• Completion: Workflow completes and waits for the next scheduled trigger cycle."
+      }
+    ]
+  },
   {
     title: "MetaReads",
     description:
